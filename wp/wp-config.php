@@ -20,40 +20,22 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-if (isset($_ENV['DATABASE'])) {
-  define( 'DB_NAME', $_ENV['DATABASE'] );
-}
+define( 'DB_NAME', 'test' );
 
 /** Database username */
-if (isset($_ENV['USERNAME'])) {
-  define( 'DB_USER', $_ENV['USERNAME'] );
-}
+define( 'DB_USER', '4AACjiC2j2xWjzH.root' );
 
 /** Database password */
-if (isset($_ENV['PASSWORD'])) {
-  define( 'DB_PASSWORD', $_ENV['PASSWORD'] );
-}
+define( 'DB_PASSWORD', 'password' );
 
 /** Database hostname */
-if (isset($_ENV['HOST'])) {
-  define( 'DB_HOST', $_ENV['HOST'] );
-}
+define( 'DB_HOST', 'gateway01.us-west-2.prod.aws.tidbcloud.com:4000' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
 
 /** The database collate type. Don't change this if in doubt. */
-if (isset($_ENV['DB_COLLATE'])) {
-  define( 'DB_COLLATE', $_ENV['DB_COLLATE'] );
-}
-else {
-  if (isset($_ENV['HOST']) && str_contains($_ENV['HOST'], 'tidbcloud.com')) {
-    define ( 'DB_COLLATE', 'utf8mb4_general_ci');
-  }
-  else {
-    define( 'DB_COLLATE', '' );
-  }
-}
+define( 'DB_COLLATE', 'utf8mb4_general_ci' );
 
 /**#@+
  * Authentication unique keys and salts.
